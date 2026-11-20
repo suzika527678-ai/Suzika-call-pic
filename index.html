@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <title>SUZIKA Call Pic – HD Photo Gallery & Video Reels</title>
+    <meta name="application-name" content="SUZIKA Call Pic" />
+    <meta
+      name="description"
+      content="SUZIKA Call Pic — Explore our HD photo gallery, full-screen video reels, and vibrant creator community right on your mobile or desktop."
+    />
+    <meta name="theme-color" content="#080a12" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="SUZIKA" />
+
+    <!-- PWA Manifest & Complete Own Brand Icons -->
+    <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
+    <!-- CANONICAL_TAG -->
+    <link rel="icon" href="/favicon.ico?v=4" sizes="any" />
+    <link rel="shortcut icon" href="/favicon.ico?v=4" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg?v=4" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=4" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=4" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/pwa-192x192.png?v=4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4" />
+
+    <!-- Open Graph Metadata (Facebook, WhatsApp, IMO, Messenger, Telegram) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SUZIKA Call Pic" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://suzika-call-pic.web.app/" />
+    <meta property="og:title" content="SUZIKA Call Pic – HD Photo Gallery & Video Reels" />
+    <meta
+      property="og:description"
+      content="SUZIKA Call Pic — Explore our HD photo gallery, full-screen video reels, and vibrant creator community right on your mobile or desktop."
+    />
+    <link rel="image_src" href="https://suzika-call-pic.web.app/og-image.png?v=5" />
+    <meta property="og:image" content="https://suzika-call-pic.web.app/og-image.png?v=5" />
+    <meta property="og:image:secure_url" content="https://suzika-call-pic.web.app/og-image.png?v=5" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="SUZIKA Call Pic Official App" />
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SUZIKA Call Pic – HD Photo Gallery & Video Reels" />
+    <meta
+      name="twitter:description"
+      content="SUZIKA Call Pic — Explore our HD photo gallery, full-screen video reels, and vibrant creator community right on your mobile or desktop."
+    />
+    <meta name="twitter:image" content="https://suzika-call-pic.web.app/og-image.png?v=5" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "SUZIKA Call Pic",
+        "alternateName": "SUZIKA",
+        "applicationCategory": "EntertainmentApplication",
+        "operatingSystem": "Android, iOS, Web",
+        "description": "SUZIKA Call Pic — Explore our HD photo gallery, full-screen video reels, and vibrant creator community right on your mobile or desktop.",
+        "image": "https://suzika-call-pic.web.app/og-image.png?v=5",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Instant Branded Startup Splash Styles (Renders at 0ms before JS bundle) -->
+    <style>
+      #suzika-boot-splash {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background:
+          radial-gradient(circle at 22% 18%, rgba(255, 53, 187, 0.16), transparent 46%),
+          radial-gradient(circle at 78% 82%, rgba(0, 210, 255, 0.14), transparent 46%),
+          #080a12;
+        transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+        font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      }
+      #suzika-boot-splash.suzika-splash-hide {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1.02);
+        pointer-events: none;
+      }
+      .suzika-splash-badge-wrap {
+        position: relative;
+        width: 108px;
+        height: 108px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .suzika-splash-ring {
+        position: absolute;
+        inset: -8px;
+        border-radius: 30px;
+        padding: 2.5px;
+        background: conic-gradient(from 0deg, #ff35bb, #8b4dff, #00d2ff, #ff35bb);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        animation: suzika-spin-ring 2.6s linear infinite;
+      }
+      .suzika-splash-glow {
+        position: absolute;
+        inset: -18px;
+        border-radius: 36px;
+        background: linear-gradient(135deg, rgba(255, 53, 187, 0.42), rgba(139, 77, 255, 0.35), rgba(0, 210, 255, 0.42));
+        filter: blur(22px);
+        animation: suzika-pulse-glow 2s ease-in-out infinite;
+      }
+      .suzika-splash-logo {
+        position: relative;
+        width: 92px;
+        height: 92px;
+        border-radius: 24px;
+        overflow: hidden;
+        background: #0d101b;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65);
+        animation: suzika-logo-breathe 2.2s ease-in-out infinite;
+      }
+      .suzika-splash-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .suzika-splash-title {
+        margin-top: 24px;
+        font-size: 26px;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+        line-height: 1.1;
+      }
+      .suzika-splash-title span {
+        background: linear-gradient(90deg, #ff35bb, #b77bff, #00d2ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .suzika-splash-sub {
+        margin-top: 6px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #9da4b8;
+      }
+      .suzika-splash-bar {
+        margin-top: 22px;
+        width: 156px;
+        height: 4px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        overflow: hidden;
+        position: relative;
+      }
+      .suzika-splash-bar::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -45%;
+        width: 55%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #ff35bb, #8b4dff, #00d2ff);
+        animation: suzika-load-slide 1.25s ease-in-out infinite;
+      }
+      @keyframes suzika-spin-ring {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes suzika-pulse-glow {
+        0%, 100% { opacity: 0.55; transform: scale(0.95); }
+        50% { opacity: 0.95; transform: scale(1.06); }
+      }
+      @keyframes suzika-logo-breathe {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.04); }
+      }
+      @keyframes suzika-load-slide {
+        0% { left: -55%; }
+        100% { left: 110%; }
+      }
+    </style>
+
+    <script>
+      (function() {
+        try {
+          var PURGE_FLAG = 'zuzika_purged_old_dummy_v4';
+          if (localStorage.getItem(PURGE_FLAG) !== 'true') {
+            ['zuzika_photos_v1', 'zuzika_photos_v2', 'zuzika_photos_v3', 'zuzika_videos_v1', 'zuzika_videos_v2', 'zuzika_videos_v3'].forEach(function(k) {
+              try { localStorage.removeItem(k); } catch(e) {}
+            });
+            if (window.indexedDB) {
+              ['zuzika_persistent_db_v2', 'zuzika_persistent_db_v1', 'zuzika_persistent_db'].forEach(function(name) {
+                try { window.indexedDB.deleteDatabase(name); } catch(e) {}
+              });
+            }
+            localStorage.setItem(PURGE_FLAG, 'true');
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <meta name="google-adsense-account" content="ca-pub-8091473961803972" />
+    <script
+      id="google-adsense-script"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8091473961803972"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-[#080a12] text-[#f7f7fb] selection:bg-[#ff35bb]/30 selection:text-white">
+    <!-- Branded SUZIKA Call Pic Startup Splash Screen -->
+    <div id="suzika-boot-splash" role="status" aria-label="Loading SUZIKA Call Pic">
+      <div class="suzika-splash-badge-wrap">
+        <div class="suzika-splash-glow"></div>
+        <div class="suzika-splash-ring"></div>
+        <div class="suzika-splash-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:100%;height:100%;display:block;" aria-label="SUZIKA Call Pic Logo">
+            <defs>
+              <linearGradient id="suzikaSplashGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#ff35bb" />
+                <stop offset="50%" stop-color="#8b4dff" />
+                <stop offset="100%" stop-color="#00d2ff" />
+              </linearGradient>
+            </defs>
+            <rect x="20" y="20" width="472" height="472" rx="112" fill="#0d101b" stroke="url(#suzikaSplashGrad)" stroke-width="26" />
+            <path d="M150 154 H362 L176 358 H362" fill="none" stroke="url(#suzikaSplashGrad)" stroke-width="64" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="suzika-splash-title">
+        <span>SUZIKA</span> Call Pic
+      </div>
+      <div class="suzika-splash-sub">Photo · Video · Community</div>
+      <div class="suzika-splash-bar"></div>
+    </div>
+
+    <div id="root"></div>
+
+    <script>
+      // Safety auto-dismiss if JS takes unusually long on slow networks
+      window.__dismissSuzikaSplash = function() {
+        var el = document.getElementById('suzika-boot-splash');
+        if (!el || el.dataset.hiding === 'true') return;
+        el.dataset.hiding = 'true';
+        el.classList.add('suzika-splash-hide');
+        setTimeout(function() {
+          if (el && el.parentNode) el.parentNode.removeChild(el);
+        }, 450);
+      };
+      setTimeout(function() {
+        if (window.__dismissSuzikaSplash) window.__dismissSuzikaSplash();
+      }, 6000);
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

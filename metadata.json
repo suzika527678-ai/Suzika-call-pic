@@ -1,0 +1,6 @@
+{
+  "name": "ZUZika Call Pic",
+  "description": "Photo, video, and community gallery app inspired by Suzika Gallery with photo slots, video showcase, interactive comments, and admin messaging.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

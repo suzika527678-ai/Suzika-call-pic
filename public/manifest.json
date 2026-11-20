@@ -1,0 +1,64 @@
+{
+  "id": "/",
+  "name": "SUZIKA Call Pic",
+  "short_name": "SUZIKA",
+  "description": "SUZIKA Call Pic — HD Photo Gallery, Full-Screen Video Reels & Community App.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "theme_color": "#080a12",
+  "background_color": "#080a12",
+  "prefer_related_applications": false,
+  "categories": ["photo", "video", "entertainment"],
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Photo Gallery",
+      "short_name": "Gallery",
+      "description": "Open HD Photo Gallery",
+      "url": "/?tab=gallery",
+      "icons": [
+        {
+          "src": "/pwa-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Video Reels",
+      "short_name": "Videos",
+      "description": "Watch Full-Screen Video Reels",
+      "url": "/?tab=videos",
+      "icons": [
+        {
+          "src": "/pwa-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}
